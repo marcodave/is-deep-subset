@@ -2,12 +2,13 @@ var isDeepSubset = require("../main");
 
 describe("is-deep-subset", function () {
     it("should detect subset of strings", function () {
+        expect(isDeepSubset("This is a string!", "")).toBe(true);
         expect(isDeepSubset("This is a string!", "string")).toBe(true);
         expect(isDeepSubset("This is a string!", "strong")).toBe(false);
-    
     });
     
     it("should detect subsequences of arrays", function () {
+        expect(isDeepSubset([1,2,3,4], [])).toBe(true);
         expect(isDeepSubset([1,2,3,4], [1,2])).toBe(true);
         expect(isDeepSubset([1,2,3,4], [1,2,3])).toBe(true);
         expect(isDeepSubset([1,2,3,4], [1,2,3,4])).toBe(true);
