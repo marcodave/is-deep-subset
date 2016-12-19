@@ -1,3 +1,5 @@
 coverage
 nbproject
 node_modules
+
+*.log
