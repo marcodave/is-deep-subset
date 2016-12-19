@@ -1,24 +1,33 @@
 {
-    "name": "is-deep-subset",
-    "description": "Check if an object is deeply contained within another one",
-    "version": "0.1.0",
-    "keywords": ["object", "subset", "json", "is-subset", "deep", "subsequence", "contains"],
-    "author": "Marco Dalla Vecchia <mdallav@gmail.com>",
-    "licence": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/marcodave/is-deep-subset.git"
-    },
-    "main": "main.js",
-    "dependencies": {
-        "is-subset": "0.1.1"
-    },
-    "devDependencies": {
-        "jasmine": "2.4.1",
-        "istanbul": "0.4.5"
-    },
-    "scripts": {
-        "test": "jasmine",
-        "coverage": "istanbul cover node_modules/jasmine/bin/jasmine.js"
-    }
+  "name": "is-deep-subset",
+  "description": "Check if an object is deeply contained within another one",
+  "version": "0.1.0",
+  "keywords": [
+    "object",
+    "subset",
+    "json",
+    "is-subset",
+    "deep",
+    "subsequence",
+    "contains",
+    "substring"
+  ],
+  "author": "Marco Dalla Vecchia <mdallav@gmail.com>",
+  "licence": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcodave/is-deep-subset.git"
+  },
+  "main": "main.js",
+  "dependencies": {
+    "is-subset": "0.1.1"
+  },
+  "devDependencies": {
+    "jasmine": "2.4.1",
+    "istanbul": "0.4.5"
+  },
+  "scripts": {
+    "test": "jasmine",
+    "coverage": "istanbul cover node_modules/jasmine/bin/jasmine.js"
+  }
 }

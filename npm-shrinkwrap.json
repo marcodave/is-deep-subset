@@ -1,0 +1,11 @@
+{
+  "name": "is-deep-subset",
+  "version": "0.1.0",
+  "dependencies": {
+    "is-subset": {
+      "version": "0.1.1",
+      "from": "is-subset@*",
+      "resolved": "https://registry.npmjs.org/is-subset/-/is-subset-0.1.1.tgz"
+    }
+  }
+}
