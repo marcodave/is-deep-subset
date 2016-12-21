@@ -21,6 +21,15 @@ describe("is-deep-subset", function () {
         expect(isDeepSubset([1,2,3,4], [1,4])).toBe(false);
         expect(isDeepSubset([1,2,3,4], [2,4])).toBe(false);
     });
+
+    it("should detect numbers and booleans in deep object structure", function() {
+        expect(isDeepSubset({a: ["very", "deep", { object: ["with", 1]}]}, 1)).toBe(true);
+        expect(isDeepSubset({a: ["very", "deep", { object: ["with", 0.3]}]}, 0.3)).toBe(true);
+        expect(isDeepSubset({a: ["very", "deep", { object: ["with", false]}]}, false)).toBe(true);
+        
+        expect(isDeepSubset({a: ["very", "deep", { object: ["with", false]}]}, true)).toBe(false);
+        expect(isDeepSubset({a: ["very", "deep", { object: ["with", "4"]}]}, 4)).toBe(false);
+    });
         
     it("should detect subset of root object", function () {
         var superset = {

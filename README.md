@@ -1,6 +1,8 @@
 # is-deep-subset
 Javascript library to check if an object is deeply contained into another
 
+[![Build Status](https://travis-ci.org/marcodave/is-deep-subset.svg?branch=master)](https://travis-ci.org/marcodave/is-deep-subset)
+
 # Usage
 
 ## require it...
@@ -34,7 +36,8 @@ isDeepSubset({ some: "deep object", you: { have: "here!" } }, { you: { have: "he
 ```javascript
 isDeepSubset({ some: "deep object", you: { have: "here!" } }, { have: "here!" }) === true
 isDeepSubset({ some: "deep object", you: { have: "here!" } }, "here!") === true
-isDeepSubset({ some: "deep object", you: { have: "here!" } }, "!") === true
+isDeepSubset({ some: "deep object", you: { have: "here!", its: 3 } }, 3) === true
+isDeepSubset({ some: "deep object", you: { have: "here!", its: true } }, true) === true
 ```
 
 ### and also checks deeply inside nested arrays

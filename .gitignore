@@ -1,5 +1,5 @@
 coverage
 nbproject
 node_modules
-
+.vscode
 *.log

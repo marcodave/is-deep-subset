@@ -4,14 +4,17 @@ var isSubset = require("is-subset");
 module.exports = isDeepSubset;
 
 function isDeepSubset(superset, subset) {
-    if (util.isString(superset)) {
+    if (superset === subset) {
+        return true;
+    }
+    if (util.isString(superset) && util.isString(subset)) {
         return superset.indexOf(subset) >= 0;
     }
     if (util.isArray(superset) && util.isArray(subset)) {
         var res = isArraySubsequence(superset, subset);
         return res;
     }
-    return isDeepSubsetReal(superset, subset);
+    return util.isObject(superset) && isDeepSubsetReal(superset, subset);
 }
 
 function isArraySubsequence(sequence, sub) {

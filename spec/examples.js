@@ -20,7 +20,8 @@ describe("is-deep-subset library", function () {
 
         expect(isDeepSubset({some: "deep object", you: {have: "here!"}}, {have: "here!"}) === true).toBe(true);
         expect(isDeepSubset({some: "deep object", you: {have: "here!"}}, "here!") === true).toBe(true);
-        expect(isDeepSubset({some: "deep object", you: {have: "here!"}}, "!") === true).toBe(true);
+        expect(isDeepSubset({ some: "deep object", you: { have: "here!", its: 3 } }, 3) === true).toBe(true);
+        expect(isDeepSubset({ some: "deep object", you: { have: "here!", its: true } }, true) === true).toBe(true);
 
         expect(isDeepSubset({some: ["deep", "object", {you: {have: "here!"}}]}, ["deep", "object"]) === true).toBe(true);
         expect(isDeepSubset({some: ["deep", "object", {you: {have: "here!"}}]}, [{you: {}}]) === true).toBe(true);
